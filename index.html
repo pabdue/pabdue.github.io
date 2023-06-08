@@ -109,13 +109,61 @@
                             <div class="level-item has-text-centered">
                                 <div>
                                     <p class="heading">Email</p>
-                                    <a href="">
+                                    <a data-target="email-modal" aria-haspopup="true">
                                         <i class="fas fa-lg fa-envelope"></i>
                                     </a>
                                 </div>
                             </div>
                         </nav>
                     </div>                
+                </div>
+                <div class="modal" id="email-modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <p class="modal-card-title">Email message</p>
+                        <button class="delete" aria-label="close"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <!-- Content ... -->
+                        <form action="send_email.php" method="POST">
+                            <div class="field">
+                              <label class="label">Name</label>
+                              <div class="control has-icons-left">
+                                <input class="input" type="text" name="name" placeholder="your name" required>
+                              </div>
+                              <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                              </span>
+                            </div>
+                            <div class="field">
+                              <label class="label">Email</label>
+                              <div class="control has-icons-left">
+                                <input class="input" type="email" name="email" placeholder="your email" required>
+                              </div>
+                              <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                              </span>
+                            </div>
+                            <div class="field">
+                              <label class="label">Subject</label>
+                              <div class="control">
+                                <input class="input" type="text" name="subject" placeholder="subject here" required>
+                              </div>
+                            </div>
+                            <div class="field">
+                              <label class="label">Message</label>
+                              <div class="control">
+                                <textarea class="textarea" name="message" placeholder="message here" required></textarea>
+                              </div>
+                            </div>
+                        </form>
+                      </section>
+                      <footer class="modal-card-foot">
+                        <button class="button is-success" type="submit">Send</button>
+                        <button class="button" aria-label="close">Cancel</button>
+                      </footer>
+                    </div>
                 </div>                        
             </div>
         </div>
