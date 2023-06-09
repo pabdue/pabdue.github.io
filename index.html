@@ -8,6 +8,7 @@
   <script src="https://kit.fontawesome.com/dba31f571d.js" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet"/>
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+  <script src=""></script>
   <title>Pablo Duenas</title>
 </head>
 <body>
@@ -86,11 +87,11 @@
                     </div>
                 </div>
                 <div class="content-block">
-                    <div class="notification is-success is-light rounded-edges">
+                    <div class="notification is-link is-light rounded-edges">
                         <p class="title is-6"><i class="fas fa-xs fa-envelope"></i> Contact me</p>
                         <button class="delete"></button>
                         <p class="subtitle is-6">Learn more about me through <b>LinkedIn</b> and <b>GitHub</b>! Also, feel free to send me an <b>email</b>. Thank you.</p>
-                        <nav class="level is-mobile" style="padding-bottom: 10px;">
+                        <nav class="level is-mobile">
                             <div class="level-item has-text-centered">
                                 <div>
                                     <p class="heading">LinkedIn</p>
@@ -101,8 +102,8 @@
                             </div>
                             <div class="level-item has-text-centered">
                                 <div>
-                                    <p class="heading">GitHub</p>
-                                    <a href="https://github.com/pabdue" target="_blank">
+                                    <p class="heading custom-btn">GitHub</p>
+                                    <a class="custom-btn" href="https://github.com/pabdue" target="_blank">
                                         <i class="fab fa-lg fa-github"></i>
                                     </a>
                                 </div>
@@ -110,9 +111,9 @@
                             <div class="level-item has-text-centered">
                                 <div>
                                     <p class="heading">Email</p>
-                                    <a data-target="email-modal" aria-haspopup="true">
+                                    <button class="button modal-button is-link is-light" data-target="email-modal" aria-haspopup="true">
                                         <i class="fas fa-lg fa-envelope"></i>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </nav>
@@ -126,42 +127,36 @@
                         <button class="delete" aria-label="close"></button>
                       </header>
                       <section class="modal-card-body">
-                        <!-- Content ... -->
-                        <form action="send_email.php" method="POST">
+                        <form id="email-form" action="send_email.php" method="POST">
                             <div class="field">
                               <label class="label">Name</label>
-                              <div class="control has-icons-left">
-                                <input class="input" type="text" name="name" placeholder="your name" required>
+                              <div class="control">
+                                <input class="input" type="text" name="name" placeholder="Your Name" required>
                               </div>
-                              <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                              </span>
                             </div>
                             <div class="field">
                               <label class="label">Email</label>
-                              <div class="control has-icons-left">
-                                <input class="input" type="email" name="email" placeholder="your email" required>
+                              <div class="control">
+                                <input class="input" type="email" name="email" placeholder="Your Email" required>
                               </div>
-                              <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                              </span>
                             </div>
                             <div class="field">
                               <label class="label">Subject</label>
                               <div class="control">
-                                <input class="input" type="text" name="subject" placeholder="subject here" required>
+                                <input class="input" type="text" name="subject" placeholder="Subject" required>
                               </div>
                             </div>
                             <div class="field">
                               <label class="label">Message</label>
                               <div class="control">
-                                <textarea class="textarea" name="message" placeholder="message here" required></textarea>
+                                <textarea class="textarea" name="message" placeholder="Your Message" required></textarea>
                               </div>
                             </div>
                         </form>
+                        <div id="modal-message" class="notification is-hidden"></div>
                       </section>
                       <footer class="modal-card-foot">
-                        <button class="button is-success" type="submit">Send</button>
+                        <button class="button is-link" type="submit">Send</button>
                         <button class="button" aria-label="close">Cancel</button>
                       </footer>
                     </div>
@@ -169,6 +164,9 @@
             </div>
         </div>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/js/bulma.min.js"></script>
+    <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+
 </body>
 </html>
