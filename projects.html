@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/dba31f571d.js" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet"/>
+  <title>Pablo Duenas</title>
+</head>
+<body>
+    <nav class="navbar has-background-light is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item logo-text" href="https://pabdue.github.io">
+                <strong>PD</strong>
+            </a>
+      
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="main-navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="https://pabdue.github.io">
+                    <div>
+                        <i class="fas fa-home icon"></i>Home
+                    </div>
+                </a>
+      
+                <a class="navbar-item" href="projects.html">
+                    <div>
+                        <i class="fas fa-code icon"></i>Projects
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="projects-bg">
+        <div class="container is-max-desktop content-start">
+            <div>
+                <!-- HTML structure for projects.html -->
+                <div class="container" style="padding-top: 50px;">
+                    <!-- Filter buttons -->
+                    <div class="buttons">
+                    <button class="button is-primary is-selected" data-filter="all">All</button>
+                    <button class="button" data-filter="swe">SWE</button>
+                    <button class="button" data-filter="data-science">Data Science</button>
+                    <button class="button" data-filter="machine-learning">Machine Learning</button>
+                    <button class="button" data-filter="web-dev">Web Dev</button>
+                    <!-- Add more filter buttons as needed -->
+                    </div>
+                
+                    <!-- Project cards -->
+                    <div class="columns is-multiline" id="project-cards">
+                    <!-- Each card represents a project -->
+                    <div class="column is-one-third">
+                        <div class="card">
+                        <div class="card-content">
+                            <p class="title">Project Title</p>
+                            <p class="subtitle">Labels: SWE</p>
+                            <div class="content">
+                            Description: Technologies used for the project
+                            </div>
+                            <a href="https://github.com/repository-link" target="_blank" class="button">GitHub</a>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Add more project cards as needed -->
+                    </div>
+                </div>
+  
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
