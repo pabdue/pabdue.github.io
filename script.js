@@ -1,5 +1,3 @@
-// JavaScript code for projects.html
-
 $(document).ready(function () {
     // Filter button click event
     $('.buttons button').click(function () {
@@ -12,11 +10,11 @@ $(document).ready(function () {
       var filter = $(this).data('filter');
   
       // Show/hide project cards based on the selected filter
+      $('#project-cards .column').hide();
       if (filter === 'all') {
-        $('#project-cards .card').show();
+        $('#project-cards .column').show();
       } else {
-        $('#project-cards .card').hide();
-        $('#project-cards .card:contains(' + filter + ')').show();
+        $('#project-cards .column[data-labels*="' + filter + '"]').show();
       }
     });
   });
