@@ -77,3 +77,45 @@
     color: black;
     padding-bottom: 5px;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar-item {
+      padding: 10px;
+    }
+    
+    .navbar-item div {
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-burger {
+      display: block;
+    }
+    
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+    }
+    
+    .navbar-menu.is-active {
+      display: block;
+    }
+
+    .content-size {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .bg {
+        height: 100vh; /* Adjust the height to fit the entire viewport */
+    }
+      
+    .projects-bg {
+        height: 100vh; /* Adjust the height to fit the entire viewport */
+    }
+  }
