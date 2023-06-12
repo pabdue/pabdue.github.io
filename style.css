@@ -9,7 +9,7 @@
 
 .bg {
     width: 100%;
-    height: 200vh;
+    height: 280vh;
     display: flex;
     background-size: 300% 300%;
     background-image: linear-gradient(-45deg, #6666c4 0%, #ffff91 25%, #fad564 51%, #0000ff 100%);
@@ -42,18 +42,17 @@
 }
 
 .content-start {
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
 .content-block {
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 }
 
 .content-size {
     padding-left: 200px;
     padding-right: 200px;
-    justify-content: center;
 }
 
 .rounded-edges {
