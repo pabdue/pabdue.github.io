@@ -71,3 +71,10 @@
     display: flex;
     background-color: hwb(48 36% 6%);
 }
+
+.project-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+    padding-bottom: 5px;
+}
