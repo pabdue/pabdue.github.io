@@ -19,7 +19,7 @@ A personal portfolio website created using GitHub Pages. Access it [here](https:
 - [Bulma Framework](https://bulma.io/)
 
 ## Preview
-![preview](preview.png)
+![preview](photos/preview.png)
 
 ## Usage
 - This website serves as a comprehensive portfolio, showcasing valuable information, skills, and a diverse range of projects.
