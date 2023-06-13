@@ -1,3 +1,9 @@
+<!--
+    File: projects.html
+    Description: This HTML file represents the projects dashboard page of my portfolio website.
+    Author: Pablo Duenas
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +18,7 @@
   <title>Pablo Duenas</title>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar has-background-light is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item logo-text" href="https://pabdue.github.io">
@@ -43,7 +50,7 @@
     </nav>
 
     <div class="projects-bg">
-        <div class="container is-max-desktop content-start">
+        <div class="container is-max-desktop content-start" style="padding-bottom: 150px;">
             <div>
                 <div class="container">
                     <!-- Filter buttons -->
@@ -54,7 +61,6 @@
                         <button class="button is-rounded" data-filter="machine-learning">Machine Learning</button>
                         <button class="button is-rounded" data-filter="web-dev">Web Development</button>
                     </div>
-                
                     <!-- Project cards -->
                     <div class="columns is-multiline" id="project-cards">
                         <!-- Each card represents a project -->
@@ -337,11 +343,46 @@
                                 </footer>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Footer -->
+    <footer class="footer has-background-light">
+        <div class="content has-text-centered">
+            <p>
+                &copy; 2023 Pablo Duenas. All rights reserved.
+            </p>
+            <p>
+                <a href="https://www.linkedin.com/in/pduenas007" target="_blank">LinkedIn <i class="fab fa-lg fa-linkedin"></i></a> | 
+                <a href="https://github.com/pabdue" target="_blank">GitHub <i class="fab fa-lg fa-github"></i></a>
+            </p>
+        </div>
+    </footer>
+        <!-- JavaScript to handle navbar burger click -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Get all "navbar-burger" elements
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+                  
+                // Check if there are any navbar burgers
+                if ($navbarBurgers.length > 0) {
+                  
+                    // Add a click event on each of them
+                    $navbarBurgers.forEach(el => {
+                        el.addEventListener('click', () => {
+                            // Get the target from the "data-target" attribute
+                            const target = el.dataset.target;
+                            const $target = document.getElementById(target);
+                    
+                            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                            el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+                        });
+                    });
+                }
+            });
+        </script>
 </body>
 </html>
